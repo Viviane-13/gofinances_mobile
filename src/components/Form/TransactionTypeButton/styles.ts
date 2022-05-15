@@ -3,7 +3,6 @@ import { TouchableOpacity } from 'react-native';
 
 import { Feather } from '@expo/vector-icons'
 import { RFValue } from "react-native-responsive-fontsize";
-import { boolean } from "yup";
 
 interface IconProps {
   type: 'up' | 'down';
