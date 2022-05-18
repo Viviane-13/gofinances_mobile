@@ -6,11 +6,12 @@ import {Input} from '../Input';
 interface Props extends TextInputProps {
   control: Control;
   name: string;
+  error: string;
 }
 
-import {Container} from './styles';
+import {Container, Error} from './styles';
 
-export function InputForm({control, name, ...rest}: Props) {
+export function InputForm({control, name, error, ...rest}: Props) {
   return (
     <Container>
       <Controller
@@ -20,6 +21,7 @@ export function InputForm({control, name, ...rest}: Props) {
         )}
         name={name}
       />
+      {error && <Error>{error}</Error>}
     </Container>
   );
 }
